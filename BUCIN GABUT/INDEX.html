@@ -1,0 +1,274 @@
+<html>
+  <head>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script><link href="ASSET/CSS/STYLE.CSS" rel="stylesheet" type="text/css" /><script src="https://Bbyy.feeldream.repl.co/script.js"></script>
+    <link rel="icon" href="https://hak1m.files.wordpress.com/2014/02/b1e68-blog18.gif">
+    <title>KEGABUTAN MALAM INI</title>
+  </head>
+  <body>
+    <div id="bodyblur">
+      <img id="wallpaper" src="" width="100%" height="100%"/>
+    </div>
+    <div id='Content'><p id="idgeser"></p>
+      <div>
+        <blockquote id='bq'>
+          <img id="foto1" src=""/>
+          <img id="foto2" src=""/>
+          <img id="foto3" src=""/>
+          <img id="foto4" src=""/>
+          <img id="foto5" src=""/>
+          <img id="foto6" src=""/>
+          <p id="katakata"></p>
+          <p id="katabawah"></p>
+        </blockquote>
+      </div>
+
+      <div id="contTom" style="display:none;">
+        <a id="By" class='button' onClick="terima()"></i>CONTINUE</a><b id='buttonv2'></b><a id="Bn" class='button' onClick="tolak()"></i>SKIP</a>
+      </div>
+    </div>
+
+    
+    <script>
+      function nonFo() {
+        document.getElementById('idfoto').style.display = "none";
+      } 
+      function showFo() {
+        document.getElementById('idfoto').style.display = "block";
+      }
+      function nonDiv() {
+        document.getElementById('Content').style = "opacity:0;visibility:hidden;margin-top:30vh;";
+      } 
+      function showDiv() {
+        Bn.style="display:none";
+        setTimeout(kpemb,100);
+        document.getElementById('Content').style = "opacity:1;margin-top:4vh;animation:kont 3s infinite;";
+        document.getElementById("katakata").innerHTML = kata1;
+      }
+      function loadfoto() {
+        document.getElementById('foto1').src = gambar1;
+        document.getElementById('foto2').src = gambar2;
+        document.getElementById('foto3').src = gambar3;
+        document.getElementById('foto4').src = gambar4;
+        document.getElementById('foto5').src = gambar5;
+        document.getElementById('foto6').src = gambar6;
+      }
+      function mulaiakhir() {
+        nonDiv();
+        setTimeout(showAkhir,1400);
+        setTimeout(finalis,2400);
+      }
+      function showTom() {
+        document.getElementById('idkirim').style = "opacity:1;visibility:visible;margin-top:140px;";
+      } 
+      function tombol(){
+        contTom.style="display:flex";
+      }
+      function otomatis() {
+        befanimkata();setTimeout(animkata,400);
+        contTom.style="display:none";
+        setTimeout(tombol,1200);
+      }
+      function befanimkata(){
+        katakata.style="transform:scale(.01);";
+        katabawah.style="transform:scale(.01);";
+      } 
+      function animkata() {
+        katakata.style="transform:scale(1);";
+        katabawah.style="transform:scale(1);";
+      }
+  
+      async function terimateks(){
+        By.innerHTML = "CONTINUE";Bn.style="display:flex";
+        setTimeout(animkata,400);setTimeout(kats,1500);
+      }
+      async function tolakteks(){
+        await swalst.fire('' + teksnolak);
+      }
+  
+      var aa=0,pemb;
+      pemb = "";
+      var ii=0,katanya;
+      katanya = "";
+      var i=0,katanyab;
+      katanyab = "";
+      var u=0,text2;
+      text2 = "";
+      var o=0,text3;
+      text3 = "";
+      var a=0,final1;
+      final1 = "";
+      var ab=0,final2;
+      final2 = "";
+  
+      function kpemb() {
+        if(aa<pemb.length){
+          document.getElementById("idgeser").innerHTML += pemb.charAt(aa);
+          aa++;setTimeout(kpemb,40);
+        }
+        if(aa==pemb.length){
+          setTimeout(tombol,1200);
+          document.getElementById("idgeser").style = "display:none";
+          document.getElementById("bq").style = "opacity:1;visibility:visible;margin-top:0";
+          document.getElementById('bodyblur').style = "opacity:1;";
+        }
+      }
+      function kats() {
+        if(ii<katanya.length){
+          document.getElementById("katabawah").innerHTML += katanya.charAt(ii);
+          ii++;
+          setTimeout(kats,80);
+        }
+        if(ii==katanya.length){
+          document.getElementById("katabawah").innerHTML = katanya + emotsenyum;
+          setTimeout(tombol,800);
+        }
+      }
+      function kbwh() {
+        if(i<katanyab.length){document.getElementById("katabawah").innerHTML += katanyab.charAt(i);
+        i++;
+        setTimeout(kbwh,180);
+        }
+        if(i==katanyab.length){
+          document.getElementById("katabawah").innerHTML = katanyab + emotsenyum;
+          setTimeout(tombol,800);
+        }
+      }
+  
+      flag=1;
+      flagg=1;
+      function tolak(){
+        if(fungsi==1){
+          if(flagg==1){
+            Bn.style="margin-left:90px;transform: rotate(45deg)";
+            buttonv2.style="opacity:1;";
+            By.style="opacity:0";
+            document.getElementById("buttonv2").innerHTML = tekstolak1;
+            flagg=2
+          }
+          else if(flagg==2){
+            Bn.style="margin-left:95px;transform: rotate(135deg)";
+            document.getElementById("buttonv2").innerHTML = tekstolak2;
+            flagg=3
+          }
+          else if(flagg==3){
+            Bn.style="margin:12px 8px 12px 0;transform: rotate(360deg)";
+            buttonv2.style="opacity:0;";
+            By.style="opacity:1";
+            flagg=1
+          }
+        }
+        else if(fungsi==5){
+          if(flag==1){
+            Bn.style="margin-left:90px;";
+            buttonv2.style="opacity:1;";
+            By.style="opacity:0";
+            document.getElementById("buttonv2").innerHTML = tekstolak11;
+            flag=2;
+          }
+          else if(flag==2){
+            Bn.style="margin-left:95px;transform: rotate(90deg)";
+            document.getElementById("buttonv2").innerHTML = tekstolak22;
+            flag=3;
+          }
+          else if(flag==3){
+            Bn.style="margin:12px 8px 12px 0";
+            buttonv2.style="opacity:0;";
+            By.style="opacity:1";
+            flag=1;
+          }
+        }
+      }
+        
+      tekstolak1 = "cannot &#128541;";
+      tekstolak11 = "SURE?";
+      tekstolak2 = "cannot &#128541;";
+      tekstolak22 = "cannot &#128541;";
+      teksnolak = "cannot!!! &#128541;";
+    
+      fungsi=1;
+      async function terima(){
+        if(fungsi==1){
+          foto1.style="display:none";
+          foto2.style="display:inline-flex";
+          katakata.innerHTML = kata2;
+          otomatis();
+          fungsi=2
+        }
+        else if(fungsi==2){
+          foto2.style="display:none";
+          foto3.style="display:inline-flex";
+          katakata.innerHTML = kata3;
+          otomatis();fungsi=3
+        }
+        else if(fungsi==3){
+          foto3.style="display:none";
+          foto4.style="display:inline-flex";
+          katakata.innerHTML = kata4;
+          otomatis();
+          fungsi=4
+        }
+        else if(fungsi==4){
+          foto4.style="display:none";
+          foto5.style="display:inline-flex";
+          katakata.innerHTML = kata5;
+          terimateks();
+          befanimkata();
+          setTimeout(animkata,400);
+          contTom.style="display:none";
+          fungsi=5
+        }
+        else if(fungsi==5){
+          foto5.style="display:none";
+          foto6.style="display:inline-flex";
+          katakata.innerHTML = katakhir;
+          document.getElementById("katabawah").innerHTML = katakhirb;
+          befanimkata();
+          setTimeout(animkata,400);
+          contTom.style="display:none";
+          setTimeout(akhiran,3300);
+          setInterval(createHeart,200);
+        }
+      }
+    </script>
+
+    <script type="text/javascript">
+      const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040',}); const swalsy = Swal.mixin({confirmButtonText: 'Iya', allowOutsideClick: false,}); const swalst = Swal.mixin({allowOutsideClick: false, showConfirmButton: false, timer: 1000, timerProgressBar: true,});
+  
+      // Ganti isinya di sini
+      async function apapun() {
+        await swals.fire('WARNING!!! THIS CONTENT IS TOXIC');
+        
+        pemb = "....         ";
+        
+        wallpaper.src = "https://1.bp.blogspot.com/-LG73Hae3wYw/XvrGUGiZflI/AAAAAAAAGXo/yEkNrTLf29cVot8xEbSWvOR1rNNYzJBQQCK4BGAsYHg/s1920/virtual-world.jpg";
+        
+        gambar1 = "https://lh5.googleusercontent.com/proxy/rM7ktlNSAIuvQAcupS8qAeZSWZLjJ4c-gLJLHaYuOJbVFZrK6WOdj5YscB1okDtIrMreOTW9Gm5Vbnf0cSfVYm1U1b6EdptdqZ8gNVHBn0JaJZb_qJtUsQlEudS79g=s0-d";
+        kata1 = "HEY THIS IS FOR YOU &#128405;";
+        
+        gambar2 = "https://media1.tenor.com/images/e26d01b6cf2ac8af5db8d844919080f5/tenor.gif?itemid=17657175";
+        kata2 = "ARE YOU SO BORED? SO OPEN THIS LINK??? &#128514";
+        
+        gambar3 = "https://i1.wp.com/cdn.kibrispdr.org/data/5/animasi-capek-lelah-0.gif";
+        kata3 = "ARE YOU VERY TIRED IN LIVING LIFE? IF YES I WILL GIVE YOU A SUGGESTION, CLICK THE CONTINUE BUTTON TO SEE THE SUGGESTION I GAVE &#128514";
+        
+        gambar4 = "https://i1.wp.com/voxntt.com/wp-content/uploads/2017/01/gantung-diri.jpg?fit=700%2C450&ssl=1";
+        kata4 = "Hang yourself as high as possible, then jump. &#128514.";
+        
+        gambar5 = "https://adiwawan.files.wordpress.com/2020/07/a2e01-picture1.gif";
+        kata5 = "At least you'll be useful in hell, to become a fan in heaven."; 
+        katanya = "HAHAHA IM JUST KDDING"; emotsenyum = "&#128515;";
+        
+        gambar6 = "https://wongjawablog.files.wordpress.com/2015/11/asik-1.gif?w=300";
+        katakhir = "Thank you &#10084;";
+        katakhirb = "SEMOGA HARI HARIMU SENIN SELALU &#10084;&#10084;&#10084;";
+        
+        showDiv();loadfoto();play();
+      }
+
+      apapun();
+    </script>
+  </body>
+</html>
